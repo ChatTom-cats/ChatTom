@@ -1,0 +1,43 @@
+/* pages/register_sex/register_sex.wxss */
+Page{
+    width: 100%;
+    height: 100%;
+}
+.page{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-image{
+    position: absolute;
+    top:0;
+    left:0;
+    width : 100%;
+    height : 100%;
+    z-index:-1;
+}
+.rob{
+    width: 600rpx;
+    height: 600rpx;
+    margin-top:81rpx;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.sexoptions{
+    width: 600rpx;
+    height: 600rpx;
+    margin-top:81rpx;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.male{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.female{
+    display:flex;
+    align-items:center;
+}
