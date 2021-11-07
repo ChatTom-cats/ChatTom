@@ -1,0 +1,48 @@
+/* pages/register/register_sex.wxss */
+Page{
+    width: 100%;
+    height: 100%;
+}
+.page{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-image{
+    position: absolute;
+    top:0;
+    left:0;
+    width : 100%;
+    height : 100%;
+    z-index:-1;
+}
+.name-input{
+    color:black;
+    text-align: center;
+    z-index:1;
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    height: 40px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 25px;
+}
+.rob{
+    width: 600rpx;
+    height: 600rpx;
+    margin-top:81rpx;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.name-btn{
+    margin-top: 10px;
+    margin-left:40%;
+    border-radius: 20px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.name-pro{
+    border-radius: 50px;
+}
