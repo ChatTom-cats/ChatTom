@@ -1,12 +1,14 @@
 {
   "pages":[
+    "pages/register_age/register_age",
+    "pages/register_name/register_name" ,
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "ChatTom",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
