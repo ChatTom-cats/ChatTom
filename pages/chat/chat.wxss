@@ -1,0 +1,115 @@
+/**chat.wxss**/
+
+page{
+  background-color: #e0dde0;
+}
+.leftMsg {
+  position: relative;
+  font-size: 35rpx;
+  color: #444;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #fff;
+  word-wrap:break-all;
+  border-radius: 10rpx;
+  z-index: 10;
+}
+.trangleLeft{
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 15rpx;
+  left: -24rpx;
+  font-size: 0;
+  line-height: 0;
+  border: 12rpx solid transparent;
+  border-right-color: #fff;
+}
+.rightMsg {
+  position: relative;
+  font-size: 36rpx;
+  color: #444;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #96EB6A;
+  word-break: break-all;
+  border-radius: 10rpx;
+  z-index: 10;
+}
+.trangleRight{
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 15rpx;
+  right: -24rpx;
+  font-size: 0;
+  line-height: 0;
+  border: 12rpx solid transparent;
+  border-left-color: #96EB6A;
+}
+.headPor image{
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 20rpx;
+}
+
+.chat-content {
+  width: 100%;
+  flex: 1;
+  overflow: scroll;
+}
+.chat-input {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.chat-input-wrapper {
+  width: 100%;
+  display: flex; 
+  padding: 16rpx 0;
+  background-color: #f4f4f6;
+  border-top: 1rpx solid #d6d7d9;
+}
+
+.chat-input-main {
+  flex: 1;
+  height: 100%;
+  padding: 0 15rpx;
+  display: flex;
+ 
+}
+.chat-input-main > input {
+  height: 46rpx;
+  line-height: 46rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+  padding: 10rpx;
+  border: 1rpx solid #d6d7d9;
+  font-size: 14px;
+  width: 75%;
+}
+.chat-input-other {
+  width: 60rpx;
+  
+}
+.chat-input-other > image {
+  
+  margin-top: 14rpx;
+  width: 100%;
+  height: 60rpx;
+}
+.btnsent{
+  color: #fff;
+  background-color: #00cafc;
+  font-size: 30rpx;
+  border-radius: 12rpx;
+  width: 120rpx; 
+  margin:0 15rpx; 
+  height: 72rpx;
+  display: flex;
+  align-items: center; 
+    vertical-align: center; 
+    justify-content: center;
+}
+
+
