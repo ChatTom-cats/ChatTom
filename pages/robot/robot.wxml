@@ -1,0 +1,13 @@
+<!--pages/robot/robot.wxml-->
+<view class="top">
+   <view class="head">
+      <image  mode="widthFix" src="/images/head.jpg"></image>
+</view>
+    <text>ChatTom</text>
+</view>
+<view class="introduce">
+    <view class="font">
+      <text>我的自我介绍</text>
+    </view>
+    <text decode="{{true}}">hello,我是机器人ChatTom</text>
+</view>
