@@ -25,9 +25,15 @@ Page({
     }
   },
   buttonClient:function(){
-    console.log("点击了按钮");
+    console.log("点击了个人中心按钮");
     wx.navigateTo({
       url: '../person/person',
+    })
+  },
+  buttonRobot:function(){
+    console.log("点击了机器人介绍按钮");
+    wx.navigateTo({
+      url: '../robot/robot',
     })
   },
   getUserProfile(e) {
