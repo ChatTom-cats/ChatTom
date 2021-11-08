@@ -16,13 +16,11 @@ Page{
     height : 100%;
     z-index:-1;
 }
-.rob{
-    width: 600rpx;
-    height: 600rpx;
-    margin-top:81rpx;
-    display:flex;
-    justify-content: center;
-    align-items:center;
+.pic{padding: 270rpx 0;
+  align-items: center;
+  text-align: center;}
+.pic .rob{
+  width: 500rpx;
 }
 .sexoptions{
     width: 600rpx;
@@ -32,12 +30,37 @@ Page{
     justify-content: center;
     align-items:center;
 }
-.male{
+ .chooseType {
+    padding-left: 80rpx;
+    padding-right: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30rpx;
+  }
+  
+  .chooseType-content-img{
     display:flex;
-    align-items:center;
     justify-content: center;
-}
-.female{
-    display:flex;
-    align-items:center;
-}
+    align-items: center;
+    width: 90rpx;
+    height: 90rpx;
+  }
+  
+  
+  .chooseType-content{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .chooseType-content-select{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(163, 162, 162,0.2);
+  }

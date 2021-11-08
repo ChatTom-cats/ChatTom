@@ -1,26 +1,20 @@
 <!--pages/register_age/register_sex.wxml-->
 <!--背景图片-->
 <view class="page">
-    <image class="bg-image" mode="scaleToFill" src="/images/bg.jpg"></image>
-    <view style="top: 50rpx;">  
-        <image class="rob" src="/images/rob.png"></image>
-        <view style="flex-direction:column;">
-        <!-- <view style="flex-direction:column;" wx:for="{{sexbg}}" wx:key="{{index}}" bindtap="clickBtn" data-index="{{index}}"> -->
-            <!-- <view class="sexoptions">
-                <image wx:if="{{index==selectedIndex}}" class="sex" src="{{item.icon}}"></image>
-                <image wx:else class="sex" src="{{item.icon}}"></image>
-            </view> -->
-            <!-- 尝试做成图图标按钮 -->
-            <radio-group class="sex" style="column-count: 2;">
-                <radio class="male" value="male">male</radio>
-                <radio class="female" value="female">female</radio>
-            </radio-group>
+    <image class="bg-image" style="opacity: {{0.68}};" mode="scaleToFill" src="/images/bg.jpg"></image>
+    <view class="pic" style="top: 50rpx;" >  
+        <image class="rob"  mode="widthFix" src="/images/rob.png" style="opacity: {{0.68}};"></image>
+        <view class="chooseType" >
+            <view class=" {{item.checked?'chooseType-content-select':'chooseType-content'}}'" wx:for="{{list}}" wx:key="index" data-id="{{index}}" bindtap="choose">
+            <image class="chooseType-content-img" src="{{item.img}}" bindtap="gotoChat"></image>
+            <view>{{item.name}}</view>   
+            </view>
         </view>
     </view>
     <view wx:if="{{sex}}" style="position:fixed; bottom:0;width: 750rpx;">
-        <progress class="name-pro" percent="66.66" color="grey" duration="15" active />
-     </view>
-     <view wx:else style="position:fixed; bottom:0;width: 750rpx;">
-        <progress class="name-pro" percent="33.33" color="grey"/>
-     </view>
+        <progress class="name-pro" percent="66.66" color="grey" duration="15" active="true"></progress>
+    </view>
+    <view wx:else style="position:fixed; bottom:0;width: 750rpx;">
+        <progress class="name-pro" percent="33.33" color="grey"></progress>
+    </view>
 </view>
