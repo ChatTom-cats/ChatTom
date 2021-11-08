@@ -6,21 +6,27 @@ Page({
      */
     data: {
         name:""
-
     },
 
     nameInput: function (e) {
         this.setData({
           name: e.detail.value
         })
+        console.log(e.detail.value)
+        var username = e.detail.value
+        console.log(username)
       },
 
-    gotoSex:function( ){
+      gotoSex:function( e){
       wx.navigateTo({
-        url: '/pages/register_sex/register_sex',
-      })  
+        url: '/pages/register_age/register_age',
+      }) 
     },
 
+    loginForm: function(data) {
+      console.log(data.detail.value)
+      var username = data.detail.value.name-input
+    },
 
     /**
      * 生命周期函数--监听页面加载

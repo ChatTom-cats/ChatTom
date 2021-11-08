@@ -27,17 +27,14 @@ Page{
     border: 2px solid rgb(255, 255, 255);
     border-radius: 25px;
 }
-.rob{
-    width: 600rpx;
-    height: 600rpx;
-    margin-top:81rpx;
-    display:flex;
-    justify-content: center;
-    align-items:center;
+.pic{padding: 270rpx 0;
+    align-items: center;
+    text-align: center;}
+.pic .rob{
+    width: 500rpx;
 }
 .name-btn{
     margin-top: 10px;
-    margin-left:40%;
     border-radius: 20px;
     display:flex;
     justify-content: center;

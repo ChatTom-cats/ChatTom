@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/register_age/register_age",
     "pages/register_name/register_name" ,
+    "pages/register_age/register_age",
     "pages/index/index",
     "pages/logs/logs"
   ],
