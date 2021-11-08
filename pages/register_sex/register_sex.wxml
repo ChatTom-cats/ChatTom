@@ -1,0 +1,26 @@
+<!--pages/register_age/register_sex.wxml-->
+<!--背景图片-->
+<view class="page">
+    <image class="bg-image" mode="scaleToFill" src="/images/bg.jpg"></image>
+    <view style="top: 50rpx;">  
+        <image class="rob" src="/images/rob.png"></image>
+        <view style="flex-direction:column;">
+        <!-- <view style="flex-direction:column;" wx:for="{{sexbg}}" wx:key="{{index}}" bindtap="clickBtn" data-index="{{index}}"> -->
+            <!-- <view class="sexoptions">
+                <image wx:if="{{index==selectedIndex}}" class="sex" src="{{item.icon}}"></image>
+                <image wx:else class="sex" src="{{item.icon}}"></image>
+            </view> -->
+            <!-- 尝试做成图图标按钮 -->
+            <radio-group class="sex" style="column-count: 2;">
+                <radio class="male" value="male">male</radio>
+                <radio class="female" value="female">female</radio>
+            </radio-group>
+        </view>
+    </view>
+    <view wx:if="{{sex}}" style="position:fixed; bottom:0;width: 750rpx;">
+        <progress class="name-pro" percent="66.66" color="grey" duration="15" active />
+     </view>
+     <view wx:else style="position:fixed; bottom:0;width: 750rpx;">
+        <progress class="name-pro" percent="33.33" color="grey"/>
+     </view>
+</view>
