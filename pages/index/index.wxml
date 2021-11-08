@@ -20,4 +20,10 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+  <view>
+   <button bindtap="buttonClient">个人中心</button>
+  </view>
+  <view>
+  <button bindtap="buttonRobot">机器人介绍</button>
+  </view>
 </view>

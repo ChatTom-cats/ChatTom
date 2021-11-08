@@ -1,13 +1,16 @@
 {
-    "description": "项目配置文件",
-    "packOptions": {
-        "ignore": [
-            {
-                "type": "file",
-                "value": ".eslintrc.js"
-            }
-        ]
-    },
+
+
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": [
+      {
+        "type": "file",
+        "value": ".eslintrc.js"
+      }
+    ]
+  },
+  
     "setting": {
         "bundle": false,
         "userConfirmedBundleSwitch": false,
@@ -40,8 +43,8 @@
     },
     "compileType": "miniprogram",
     "libVersion": "2.19.4",
-    "appid": "wx28c40fed1a5758d8",
-    "projectname": "miniprogram-2",
+    "appid": "wxa05407bed9ffd89b",
+    "projectname": "ChatTom",
     "debugOptions": {
         "hidedInDevtools": []
     },
