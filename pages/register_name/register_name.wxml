@@ -1,0 +1,19 @@
+<!--背景图片-->
+<view class="page" >
+    <image class="bg-image" style="opacity:{{0.68}}" mode="scaleToFill" src="/images/bg.jpg"></image>
+    <view class="pic" style="top: 50rpx;">  
+        <image class="rob" mode="widthFix" style="opacity:{{0.8}}" src="/images/rob.png"></image>
+        <view style="flex-direction:row;">
+            <input type="text" bindinput="nameInput" class="name-input" focus placeholder="请输入姓名..." />
+        </view>
+        <view wx:if="{{name}}">
+                <button class="name-btn" size="mini" type="default" bindtap="gotoSex" >NEXT</button>
+        </view>
+    </view>
+    <view wx:if="{{name}}" style="position:fixed; bottom:0;width: 750rpx;">
+        <progress class="name-pro" percent="33.33" color="grey" active />
+     </view> 
+     <view wx:else style="position:fixed; bottom:0;width: 750rpx;">
+        <progress class="name-pro" percent="0" color="grey" active />
+     </view>
+</view>

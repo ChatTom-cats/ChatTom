@@ -1,0 +1,18 @@
+<!--pages/login.wxml-->
+<view class="a1 flot">
+<view class="head flot">
+<open-data type="userAvatarUrl"></open-data>
+</view>
+<view class="name flot">
+<open-data type="userNickName"></open-data>
+</view> 
+</view>
+<view class="a2 ">
+<text>年龄:{{}}</text>
+</view>
+<view class="a2">
+<text>性别:{{}}</text>
+</view>
+<view class="a2">
+<text>联系方式:{{}}</text>
+</view>
