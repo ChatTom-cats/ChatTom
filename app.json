@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "pages":[
     "pages/register_sex/register_sex",
     "pages/index/index",
@@ -14,24 +13,3 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
-=======
-    "pages": [
-        "pages/chat/chat",
-        "pages/index/index",
-        "pages/register_name/register_name",
-        "pages/register_age/register_age",
-        "pages/logs/logs",
-        "pages/person/person",
-        "pages/robot",
-        "pages/robot/robot"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "ChatTom",
-        "navigationBarTextStyle": "black"
-    },
-    "style": "v2",
-    "sitemapLocation": "sitemap.json"
-}
->>>>>>> upstream/dev-front
