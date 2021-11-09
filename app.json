@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/register/register",
         "pages/index/index",
         "pages/chat/chat",
         "pages/register_age/register_age",
@@ -9,11 +10,11 @@
         "pages/robot",
         "pages/robot/robot"
     ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "ChatTom",
-        "navigationBarTextStyle": "black"
+    "window":{
+        "backgroundTextStyle":"light",
+    	"navigationBarBackgroundColor": "#fff",
+    	"navigationBarTitleText": "ChatTom",
+    	"navigationBarTextStyle":"black"
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json"
