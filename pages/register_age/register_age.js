@@ -13,6 +13,7 @@ Page({
         this.setData({
             age:e.detail.value
         })
+        var userage = e.detail.value
     },
 
     gotoChat:function( ){
