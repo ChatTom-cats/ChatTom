@@ -5,8 +5,9 @@ const app = getApp()
 var inputVal = '';
 //消息数组
 var msgList = [];
+var inputheight = 0;
 //var windowWidth = wx.getSystemInfoSync().windowWidth;
-var scrollHeight = 0;
+
 //获取屏幕高度
 var windowHeight = wx.getSystemInfoSync().windowHeight;
 //
@@ -16,12 +17,10 @@ function initDate(that){
   inputVal = ''
   msgList = [{
     speaker: 'chatTom',
-    contentType: 'text',
     msg: '恭喜EDG夺得2021年全球总决赛冠军！'
   },
   {
     speaker: 'customer',
-    contentType: 'text',
     msg: 'EDG牛逼！'
   }
 ]
@@ -32,8 +31,9 @@ function initDate(that){
 }
 Page({
   data: {
-    scrollHeight: '100rpx',
-    inputBottom: 0
+    scrollHeight: '100vh',
+    inputBottom: 0,
+    lastid: ''
   },
   //初始化屏幕的消息
   onLoad() {
@@ -58,38 +58,58 @@ Page({
     
   },
   //input获得聚焦时
-  onFocus(event){
-    
-    keyHeight = event.detail.height;
+  onFocus(e){
+    keyHeight = e.detail.height;
     console.log('键盘高度：',keyHeight)
     console.log('高度：',windowHeight)
     this.setData({
-      scrollHeight: (windowHeight - keyHeight) + 'px'
-    });
-    console.log('滑动view高度：',scrollHeight)
-    this.setData({
-      toView: 'msg-' + (msgList.length - 1),
       inputBottom: keyHeight + 'px'
     })
+  },
+  //失去聚焦(软键盘消失)
+  blur: function(e) {
+    this.setData({
+      scrollHeight: '100vh',
+      inputBottom: 0 
+    })
+
   },
   //输入框有文字输入时获取文字内容
   onInput(event) {
     const value = event.detail.value;
    this.setData({ msg: value });
-    // wx.showToast({
-    //   title: value,
-    //   duration: 1000
-    // })
+    
   },
   //将输入框内容发送到scroll-view中
   send() {
     let msg = this.data.msg;
+    //提示输入为空
+    if (msg === '') {
+      wx.showToast({
+        title: '请输入内容',
+        icon: 'loading',
+        duration: 1000
+      })
+      return false;
+    }
      msgList.push({
       msg,
       speaker: 'customer'
      })
+     var query = wx.createSelectorQuery();
+     
+    //获取input高度
+    query.select('#input').boundingClientRect()
+    query.exec(function (res) {
+      //res就是标签为input的元素的信息的数组
+      //取高度
+      inputheight=res[0].height;
+    })
     this.setData({ 
       msgList,
-      inputVal: '' });
+      inputVal: '',
+      toView: 'msg' + (msgList.length - 1),
+      scrollHeight: (windowHeight - keyHeight - inputheight) + 'px'
+    });
   }
 })
