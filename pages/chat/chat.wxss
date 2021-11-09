@@ -64,9 +64,11 @@ page{
   overflow: scroll;
 }
 .chat-input {
+  height: 14vw;
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 20;
 }
 .chat-input-wrapper {
   width: 100%;

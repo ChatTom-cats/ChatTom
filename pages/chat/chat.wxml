@@ -1,11 +1,12 @@
-<view class="body">
+<view>
   <scroll-view 
-  scroll-y scroll-into-view='{{toView}}' 
+  scroll-y 
+  scroll-into-view='{{toView}}' 
+  style='height: {{scrollHeight}};'
   >
-  <block wx:key wx:for='{{msgList}}' wx:for-index="index">
-
+  <block wx:for='{{msgList}}' >
 <!-- 单个消息1 客服发出（左） -->
-<view wx:if='{{item.speaker=="chatTom"}}' id='msg-{{index}}' style='display: flex; padding: 2vw 15vw 2vw 2vw;'>
+<view wx:if='{{item.speaker=="chatTom"}}' id='msg{{index}}' style='display: flex; padding: 2vw 15vw 2vw 2vw;'>
   <view class="headLeft">
     <image src="/images/ChatTom.png" mode="widthFix"></image>
   </view>
@@ -14,35 +15,30 @@
   </view>
 </view>
 <!-- 单个消息2 用户发出（右） -->
-<view wx:if='{{item.speaker=="customer"}}' id='msg-{{index}}' style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 15vw; '>
+<view wx:if='{{item.speaker=="customer"}}' id='msg{{index}}' style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 15vw; '>
   <view>
     <view style=" display: flex; justify-content: flex-end;">
-    
-    <view class='rightMsg'>{{item.msg}}
-    <span class="trangleRight"></span>
-    
+      <view class='rightMsg'>{{item.msg}}
+        <span class="trangleRight"></span>
+      </view>
+      <open-data type="userAvatarUrl" class="headRight"></open-data>
+    </view>
   </view>
-  <open-data type="userAvatarUrl" class="headRight"></open-data>
-    
   </view>
-  
-</view>
-
-</view>
 </block>
   </scroll-view>
-  <form class="chat-input" id="hei">
+  <form class="chat-input" style='bottom: {{inputBottom}}' id="input">
       <view class="chat-input-wrapper">
         <view class="chat-input-main">
           <!-- cursor-spacing->输入框距离键盘的距离;adjust-position->是否上推页面 -->
           <input 
-            cursor-spacing="160"  
             adjust-position="{{ false }}"  
             confirm-type="send"
             bindinput="onInput"
             confirm-hold
             bindconfirm="send"
             bindfocus="onFocus" 
+            bindblur="blur"
             value='{{inputVal}}'
             placeholder="输入文字与ChatTom聊天"
             />
