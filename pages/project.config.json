@@ -1,12 +1,7 @@
 {
   "description": "项目配置文件",
   "packOptions": {
-    "ignore": [
-      {
-        "type": "file",
-        "value": ".eslintrc.js"
-      }
-    ]
+    "ignore": []
   },
   "setting": {
     "bundle": false,
@@ -35,11 +30,10 @@
     "enableEngineNative": false,
     "packNpmRelationList": [],
     "minifyWXSS": true,
-    "showES6CompileOption": false,
-    "minifyWXML": true
+    "showES6CompileOption": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.19.4",
+  "libVersion": "2.20.2",
   "appid": "wx0720ddb0a0e65bf9",
   "projectname": "ChatTom",
   "debugOptions": {
