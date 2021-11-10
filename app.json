@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/userdata/userdata",
     "pages/register_sex/register_sex",
     "pages/index/index",
     "pages/logs/logs"
