@@ -81,10 +81,10 @@ Page({
     
   },
   //将输入框内容发送到scroll-view中
-  send() {
+  send:function(e) {
     let msg = this.data.msg;
     //提示输入为空
-    if (msg === '') {
+    if (msg == '') {
       wx.showToast({
         title: '请输入内容',
         icon: 'loading',
@@ -96,9 +96,8 @@ Page({
       msg,
       speaker: 'customer'
      })
+     //获取input高度
      var query = wx.createSelectorQuery();
-     
-    //获取input高度
     query.select('#input').boundingClientRect()
     query.exec(function (res) {
       //res就是标签为input的元素的信息的数组
@@ -109,7 +108,18 @@ Page({
       msgList,
       inputVal: '',
       toView: 'msg' + (msgList.length - 1),
-      scrollHeight: (windowHeight - keyHeight - inputheight) + 'px'
+      scrollHeight: (windowHeight - keyHeight - inputheight) + 'px',
+      msg:''
     });
+  },
+  userinto: function(){
+    wx.navigateTo({
+      url: '/pages/person/person',
+    })
+  },
+  ChatTominto: function(){
+    wx.navigateTo({
+      url: '../robot/robot',
+    })
   }
 })

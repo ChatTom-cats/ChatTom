@@ -8,7 +8,7 @@
 <!-- 单个消息1 客服发出（左） -->
 <view wx:if='{{item.speaker=="chatTom"}}' id='msg{{index}}' style='display: flex; padding: 2vw 15vw 2vw 2vw;'>
   <view class="headLeft">
-    <image src="/images/ChatTom.png" mode="widthFix"></image>
+    <image src="/images/ChatTom.png" mode="widthFix" bindtap="ChatTominto"></image>
   </view>
   <view class='leftMsg'>{{item.msg}}
     <span class="trangleLeft"></span>
@@ -21,7 +21,8 @@
       <view class='rightMsg'>{{item.msg}}
         <span class="trangleRight"></span>
       </view>
-      <open-data type="userAvatarUrl" class="headRight"></open-data>
+      <view class="headRight" bindtap="userinto"><open-data type="userAvatarUrl" ></open-data></view>
+      
     </view>
   </view>
   </view>
@@ -42,7 +43,7 @@
             value='{{inputVal}}'
             placeholder="输入文字与ChatTom聊天"
             />
-          <view class="btnsent">发送</view>
+          <view class="btnsent" bindtap="send" hover-class="button-hover">发送</view>
           <view class="chat-input-other">
             <image src="/images/add.png"></image>
           </view>
