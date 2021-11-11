@@ -63,12 +63,4 @@
     },
     "plugin": {
       "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": []
-    }
-  }
 }

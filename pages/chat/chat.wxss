@@ -19,7 +19,7 @@ page{
   width: 0;
   height: 0;
   top: 15rpx;
-  left: -24rpx;
+  left: -20rpx;
   font-size: 0;
   line-height: 0;
   border: 12rpx solid transparent;
@@ -41,16 +41,21 @@ page{
   width: 0;
   height: 0;
   top: 15rpx;
-  right: -24rpx;
+  right: -20rpx;
   font-size: 0;
   line-height: 0;
   border: 12rpx solid transparent;
   border-left-color: #96EB6A;
 }
-.headPor image{
+.headLeft image{
   width: 70rpx;
   height: 70rpx;
   margin-right: 20rpx;
+}
+.headRight{
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 20rpx;
 }
 
 .chat-content {
@@ -59,9 +64,11 @@ page{
   overflow: scroll;
 }
 .chat-input {
+  height: 14vw;
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 20;
 }
 .chat-input-wrapper {
   width: 100%;
@@ -100,7 +107,7 @@ page{
 }
 .btnsent{
   color: #fff;
-  background-color: #00cafc;
+  background-color: #96EB6A;
   font-size: 30rpx;
   border-radius: 12rpx;
   width: 120rpx; 
@@ -110,6 +117,9 @@ page{
   align-items: center; 
     vertical-align: center; 
     justify-content: center;
+}
+.button-hover {
+  background-color: #6aeb76;
 }
 
 
