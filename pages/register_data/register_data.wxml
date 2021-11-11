@@ -1,0 +1,22 @@
+<!--pages/userdata/userdata.wxml-->
+<view class="page" >
+    <image class="bg-image" style="opacity:{{0.68}}" mode="scaleToFill" src="/images/bg.jpg"></image>
+    <view class="data">
+        <view class="user_register_data">用户注册信息</view>
+        <view class="table">
+            <view class="flex-cell flex-row">
+                <text class="flex-cell flex-row">姓名</text>
+                <text class="flex-cell flex-row">zy</text>
+            </view>
+            <view class="flex-cell flex-row">
+                <text class="flex-cell flex-row">性别</text>
+                <text class="flex-cell flex-row">女</text>
+            </view>
+            <view class="flex-row flex-cell">
+                <text class="flex-cell flex-row">年龄</text>
+                <text class="flex-cell flex-row">20</text>
+            </view>
+        </view>
+        <button class="check" bindtap="gotologin">确认</button>
+    </view>
+</view>

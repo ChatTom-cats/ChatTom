@@ -1,7 +1,0 @@
-<!--pages/userdata/userdata.wxml-->
-<view class="page" >
-    <image class="bg-image" style="opacity:{{0.68}}" mode="scaleToFill" src="/images/bg.jpg"></image>
-    <view>
-    <text></text>
-    </view>
-</view>
