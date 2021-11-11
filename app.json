@@ -1,16 +1,21 @@
 {
-  "pages":[
-    "pages/userdata/userdata",
-    "pages/register_sex/register_sex",
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/register/register",
+        "pages/index/index",
+        "pages/chat/chat",
+        "pages/register_age/register_age",
+        "pages/register_name/register_name",
+        "pages/logs/logs",
+        "pages/person/person",
+        "pages/robot",
+        "pages/robot/robot"
+    ],
+    "window":{
+        "backgroundTextStyle":"light",
+    	"navigationBarBackgroundColor": "#fff",
+    	"navigationBarTitleText": "ChatTom",
+    	"navigationBarTextStyle":"black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
 }

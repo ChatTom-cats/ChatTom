@@ -5,7 +5,20 @@ Page({
      * 页面的初始数据
      */
     data: {
-        name:""
+        name:"",
+        age:"",
+        checked:"",
+        list: [{
+            img: "../../images/boy.png",
+            name: "male",
+            checked: true,
+          },
+          {
+            img: "../../images/girl.png",
+            name: "female",
+            checked: false,
+          }
+        ]
     },
 
     nameInput: function (e) {
@@ -22,6 +35,39 @@ Page({
         url: '/pages/register_sex/register_sex',
       }) 
     },
+
+    choose: function (e) {
+  
+        let index = e.currentTarget.dataset.id;
+        let list = this.data.list;
+        for (let i = 0; i < list.length; i++) {
+          this.data.list[i].checked = false;
+        }
+        if (list[index].checked) {
+          this.data.list[index].checked = false;
+        } else {
+          this.data.list[index].checked = true;
+          this.setData({checked:"T"})
+        }
+        this.setData({
+          list: this.data.list,  
+        })
+        console.log(this.data.list[index].name);   
+      },
+    
+
+    ageInput:function (e) {
+        this.setData({
+            age:e.detail.value
+        })
+        var userage = e.detail.value
+    },
+
+    gotoChat:function( ){
+        wx.navigateTo({
+          url: '/pages/chat/chat',
+        })  
+      },
 
     loginForm: function(data) {
       console.log(data.detail.value)
