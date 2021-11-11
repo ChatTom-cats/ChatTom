@@ -65,7 +65,7 @@ Page({
 
     gotoChat:function( ){
         wx.navigateTo({
-          url: '/pages/index/index',
+          url: '/pages/chat/chat',
         })  
       },
 

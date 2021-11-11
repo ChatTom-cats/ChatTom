@@ -7,6 +7,7 @@
         <view style="flex-direction:row;">
             <input type="text" bindinput="nameInput" class="name-input" focus placeholder="请输入姓名..." />
         </view>
+        
     </view>
     <!--sex部分-->
     <view class="pic" wx:elif="{{!checked}}">  
@@ -29,5 +30,20 @@
             <button class="name-btn" wx:if="{{age}}" size="mini" type="default" bindtap="gotoChat" >Done</button>
         </view>
     </view>
+    <!--进度条部分-->
     
+</view>
+<view>
+    <view class="progress-box" wx:if="{{!name}}">
+        <progress percent="0" color="#10AEFF" style="position:fixed; bottom:0;width: 750rpx;" active stroke-width="3" />
+    </view>
+    <view class="progress-box" wx:elif="{{!checked}}">
+        <progress percent="33.33" color="#10AEFF" style="position:fixed; bottom:0;width: 750rpx;" active stroke-width="3" />
+    </view>
+    <view class="progress-box" wx:else="">
+        <progress percent="66.66" color="#10AEFF" style="position:fixed; bottom:0;width: 750rpx;" active stroke-width="3" />
+        <view wx:if="{{age}}">
+            <progress percent="100" color="#10AEFF" style="position:fixed; bottom:0;width: 750rpx;" active stroke-width="3" />
+        </view>
+    </view>
 </view>

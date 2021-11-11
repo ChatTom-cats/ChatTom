@@ -29,6 +29,8 @@ Page{
     border-radius: 25px;
 }
 .pic{
+    width: 100%;
+    height: 100%;
     padding-top: 270rpx;
     align-items: center;
     text-align: center;}
@@ -97,6 +99,7 @@ Page{
     justify-content: center;
     align-items:center;
 }
-.name-pro{
+.progress-box{
+    margin-top: 300rpx;
     border-radius: 50px;
 }
