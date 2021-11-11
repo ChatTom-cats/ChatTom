@@ -32,7 +32,11 @@ Page({
       })
       console.log(this.data.list[index].name);   
     },
-  
+    gotoregister_data:function( e){
+      wx.navigateTo({
+        url: '/pages/register_data/register_data',
+      }) 
+    },
       gotoChat:function( ){
           wx.navigateTo({
             url: '/pages/index/index',

@@ -1,0 +1,23 @@
+{
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/register_sex/register_sex",
+                    "pathName": "pages/register_sex/register_sex",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

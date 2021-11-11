@@ -1,7 +1,13 @@
 {
   "pages":[
-    "pages/userdata/userdata",
+    "pages/register_name/register_name",
     "pages/register_sex/register_sex",
+    "pages/register_age/register_age",
+    "pages/register_data/register_data",
+    "pages/login/login",
+    "pages/person/person",
+    "pages/chat/chat",
+    "pages/robot/robot",
     "pages/index/index",
     "pages/logs/logs"
   ],

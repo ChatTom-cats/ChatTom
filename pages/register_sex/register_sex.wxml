@@ -6,7 +6,7 @@
         <image class="rob"  mode="widthFix" src="/images/rob.png" style="opacity: {{0.68}};"></image>
         <view class="chooseType" >
             <view class=" {{item.checked?'chooseType-content-select':'chooseType-content'}}'" wx:for="{{list}}" wx:key="index" data-id="{{index}}" bindtap="choose">
-            <image class="chooseType-content-img" src="{{item.img}}"></image>
+            <image class="chooseType-content-img" src="{{item.img}}" bindtap="gotoregister_data"></image>
             <view>{{item.name}}</view>   
             </view>
         </view>
