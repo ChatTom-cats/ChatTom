@@ -31,6 +31,9 @@
   <form class="chat-input" style='bottom: {{inputBottom}}' id="input">
       <view class="chat-input-wrapper">
         <view class="chat-input-main">
+        <view class="chat-input-other">
+          <image src="/images/voice.png" mode="widthFix"></image>
+        </view>
           <!-- cursor-spacing->输入框距离键盘的距离;adjust-position->是否上推页面 -->
           <input 
             adjust-position="{{ false }}"  
@@ -45,7 +48,7 @@
             />
           <view class="btnsent" bindtap="send" hover-class="button-hover">发送</view>
           <view class="chat-input-other">
-            <image src="/images/add.png"></image>
+            <image src="/images/add.png" mode="widthFix"></image>
           </view>
         </view>
       </view>

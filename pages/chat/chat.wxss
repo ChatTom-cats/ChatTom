@@ -81,7 +81,7 @@ page{
 .chat-input-main {
   flex: 1;
   height: 100%;
-  padding: 0 15rpx;
+  padding: 0 10rpx;
   display: flex;
  
 }
