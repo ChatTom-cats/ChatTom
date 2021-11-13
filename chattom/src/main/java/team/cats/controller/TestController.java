@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/test")
 public class TestController {
 
-    @RequestMapping("/test1")
+    @PostMapping("/test1")
     public void test(@RequestBody Object data) {
         System.out.println(data);
     }
