@@ -1,4 +1,5 @@
-/* pages/register_sex/register_sex.wxss */
+/* pages/register/register.wxss */
+/* pages/register/register_name.wxss */
 Page{
     width: 100%;
     height: 100%;
@@ -7,6 +8,7 @@ Page{
     display:flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .bg-image{
     position: absolute;
@@ -16,19 +18,35 @@ Page{
     height : 100%;
     z-index:-1;
 }
-.pic{padding: 270rpx 0;
-  align-items: center;
-  text-align: center;}
-.pic .rob{
-  width: 500rpx;
+.name-input{
+    color:black;
+    text-align: center;
+    z-index:1;
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    height: 40px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 25px;
 }
-.sexoptions{
-    width: 600rpx;
-    height: 600rpx;
-    margin-top:81rpx;
+.pic{
+    width: 100%;
+    height: 100%;
+    padding-top: 270rpx;
+    align-items: center;
+    text-align: center;}
+.pic .rob{
+    width: 500rpx;
+}
+.name-btn{
+    margin-top: 10px;
+    border-radius: 20px;
     display:flex;
     justify-content: center;
     align-items:center;
+}
+.name-pro{
+    padding: 0 100;
 }
  .chooseType {
     padding-left: 80rpx;
