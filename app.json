@@ -1,12 +1,12 @@
 {
     "pages": [
-        "pages/person/person",
+        
         "pages/index/index",
         "pages/chat/chat",
         "pages/register_age/register_age",
         "pages/register_name/register_name",
         "pages/logs/logs",
-        
+        "pages/person/person",
         "pages/robot",
         "pages/robot/robot"
     ],
