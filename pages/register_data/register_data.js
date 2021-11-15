@@ -5,14 +5,22 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+      name:"",
+      sex:"",
+      age:"",
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      this.setData({
+        name:wx.getStorageSync('name'),
+        sex:wx.getStorageSync('sex'),
+        age:wx.getStorageSync('age')
+      })
+      console.log(wx.getStorageSync('name'),wx.getStorageSync('sex'),wx.getStorageSync('age'))
+     
     },
 
     /**
@@ -30,7 +38,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+      
     },
 
     /**
@@ -44,7 +52,7 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     onUnload: function () {
-
+  
     },
 
     /**

@@ -1,8 +1,6 @@
 {
   "pages":[
-    "pages/register_name/register_name",
-    "pages/register_sex/register_sex",
-    "pages/register_age/register_age",
+    "pages/register/register",
     "pages/register_data/register_data",
     "pages/login/login",
     "pages/person/person",
