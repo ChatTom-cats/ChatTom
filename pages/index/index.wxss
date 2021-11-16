@@ -17,3 +17,14 @@
 .usermotto {
   margin-top: 200px;
 }
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-nianling:before {
+  content: "\e69d";
+}

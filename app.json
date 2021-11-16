@@ -1,1 +1,22 @@
 
+{
+    "pages": [
+        "pages/index/index",
+        "pages/chat/chat",
+        "pages/register/register",
+        "pages/register_data/register_data",
+        "pages/logs/logs",
+        "pages/login/login",
+        "pages/person/person",
+        "pages/robot/robot"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "ChatTom",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}
+=======
