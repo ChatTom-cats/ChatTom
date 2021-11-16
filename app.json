@@ -1,13 +1,13 @@
+
 {
     "pages": [
-        
         "pages/index/index",
         "pages/chat/chat",
-        "pages/register_age/register_age",
-        "pages/register_name/register_name",
+        "pages/register/register",
+        "pages/register_data/register_data",
         "pages/logs/logs",
+        "pages/login/login",
         "pages/person/person",
-        "pages/robot",
         "pages/robot/robot"
     ],
     "window": {
@@ -19,3 +19,4 @@
     "style": "v2",
     "sitemapLocation": "sitemap.json"
 }
+=======
