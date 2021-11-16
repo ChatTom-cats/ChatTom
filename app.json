@@ -1,14 +1,15 @@
 
 {
     "pages": [
-        "pages/index/index",
-        "pages/chat/chat",
+        "pages/login/login",
         "pages/register/register",
         "pages/register_data/register_data",
+        "pages/index/index",
+        "pages/chat/chat",
         "pages/logs/logs",
-        "pages/login/login",
         "pages/person/person",
         "pages/robot/robot"
+        
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -19,4 +20,3 @@
     "style": "v2",
     "sitemapLocation": "sitemap.json"
 }
-=======

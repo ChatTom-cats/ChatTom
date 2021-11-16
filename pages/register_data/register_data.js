@@ -5,9 +5,11 @@ Page({
      * 页面的初始数据
      */
     data: {
-      name:"",
-      sex:"",
-      age:"",
+      user:{
+        name:"",
+        sex:"",
+        age:"",
+      }
     },
 
     /**
@@ -15,12 +17,13 @@ Page({
      */
     onLoad: function (options) {
       this.setData({
-        name:wx.getStorageSync('name'),
-        sex:wx.getStorageSync('sex'),
-        age:wx.getStorageSync('age')
+        user:{
+          name:wx.getStorageSync('name'),
+          sex:wx.getStorageSync('sex'),
+          age:wx.getStorageSync('age')
+        }
       })
       console.log(wx.getStorageSync('name'),wx.getStorageSync('sex'),wx.getStorageSync('age'))
-     
     },
 
     /**
@@ -30,9 +33,24 @@ Page({
 
     },
     gotologin:function( e){
-        wx.navigateTo({
-          url: '/pages/login/login',
-        })
+      wx.request({
+        url: 'http://127.0.0.1:8080/user/findAll',
+        method: 'POST',
+        data:{
+          name:wx.getStorageSync('name'),
+          sex:wx.getStorageSync('sex'),
+          age:wx.getStorageSync('age')
+        },
+        header:{
+          'content-type':'application/json'
+        },
+        success:function(res) {
+          console.log("success")
+        }
+      })
+      // wx.navigateTo({
+      //   url: '/pages/chat/chat'
+      // })
     },
     /**
      * 生命周期函数--监听页面显示

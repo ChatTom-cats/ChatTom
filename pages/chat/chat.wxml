@@ -22,7 +22,6 @@
         <span class="trangleRight"></span>
       </view>
       <view class="headRight" bindtap="userinto"><open-data type="userAvatarUrl" ></open-data></view>
-      
     </view>
   </view>
   </view>

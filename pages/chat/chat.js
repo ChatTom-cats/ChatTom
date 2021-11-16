@@ -29,6 +29,7 @@ function initDate(that){
     inputVal,
   })
 }
+
 Page({
   data: {
     scrollHeight: '100vh',
