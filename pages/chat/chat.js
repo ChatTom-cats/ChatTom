@@ -30,6 +30,7 @@ function initDate(that){
     inputVal
   })
 }
+
 Page({
   data: {
     scrollHeight: '100rpx',
@@ -90,6 +91,21 @@ Page({
      })
     this.setData({ 
       msgList,
-      inputVal: '' });
+      inputVal: '' 
+    });
+    wx.request({
+      url: 'http://localhost:8080/test/test1',
+      data: {
+        testdata: this.data.msg
+      },
+      dataType: "json",
+      method: 'POST',
+      header: { 
+        "Content-Type": "application/json" 
+      },
+      success:res => {
+        console.log("success");
+      }
+    })
   }
 })
