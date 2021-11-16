@@ -1,0 +1,60 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/register_sex/register_sex",
+                    "pathName": "pages/register_sex/register_sex",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/chat/chat",
+                    "pathName": "pages/chat/chat",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/robot/robot",
+                    "pathName": "pages/robot/robot",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/register_data/register_data",
+                    "pathName": "pages/register_data/register_data",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/register_name/register_name",
+                    "pathName": "pages/register_name/register_name",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/register_sex/register_sex",
+                    "pathName": "pages/register_sex/register_sex",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/register/register",
+                    "pathName": "pages/register/register",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

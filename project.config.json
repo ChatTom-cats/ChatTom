@@ -1,12 +1,7 @@
 {
   "description": "项目配置文件",
   "packOptions": {
-    "ignore": [
-      {
-        "type": "file",
-        "value": ".eslintrc.js"
-      }
-    ]
+    "ignore": []
   },
   "setting": {
     "urlCheck": false,
@@ -47,8 +42,8 @@
     "useCompilerPlugins": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.19.4",
-  "appid": "wxcd637c6fdd690029",
+  "libVersion": "2.20.2",
+  "appid": "wxcca9dc221451d1b2",
   "projectname": "ChatTom",
   "debugOptions": {
     "hidedInDevtools": []

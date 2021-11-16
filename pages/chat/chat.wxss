@@ -64,9 +64,11 @@ page{
   overflow: scroll;
 }
 .chat-input {
+  height: 14vw;
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 20;
 }
 .chat-input-wrapper {
   width: 100%;
@@ -79,7 +81,7 @@ page{
 .chat-input-main {
   flex: 1;
   height: 100%;
-  padding: 0 15rpx;
+  padding: 0 10rpx;
   display: flex;
  
 }
@@ -115,6 +117,9 @@ page{
   align-items: center; 
     vertical-align: center; 
     justify-content: center;
+}
+.button-hover {
+  background-color: #6aeb76;
 }
 
 

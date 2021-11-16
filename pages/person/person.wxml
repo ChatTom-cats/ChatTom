@@ -8,11 +8,20 @@
 </view> 
 </view>
 <view class="a2 ">
+  <view class="age">
+    <image src="/images/age.png" mode="widthFix"></image>
+  </view>
 <text>年龄:{{}}</text>
 </view>
 <view class="a2">
+  <view class="sex">
+    <image src="/images/sex.png" mode="widthFix"></image>
+  </view>
 <text>性别:{{}}</text>
 </view>
 <view class="a2">
+  <view class="tel">
+    <image src="/images/tel.png" mode="widthFix"></image>
+  </view>
 <text>联系方式:{{}}</text>
 </view>

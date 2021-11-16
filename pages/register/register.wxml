@@ -1,0 +1,52 @@
+<!--pages/register/register.wxml-->
+<!--背景图片-->
+<view class="page" >
+    <image class="bg-image" style="opacity:{{0.68}}" mode="scaleToFill" src="/images/bg.jpg"></image>
+    <!--name部分-->
+    <view class="pic" wx:if="{{check_name}}">  
+        <image class="rob" mode="widthFix" style="opacity:{{0.8}}" src="/images/rob.png"></image>
+        <view style="flex-direction:row;">
+            <input type="text" bindinput="nameInput" class="name-input" focus placeholder="请输入姓名..." />
+        </view>
+        <view>
+            <button class="name-btn" wx:if="{{name}}" size="mini" type="default" bindtap="chosenSex" >Next</button>
+        </view>
+    </view>
+    <!--sex部分-->
+    <view class="pic" wx:elif="{{!checked}}">  
+        <image class="rob"  mode="widthFix" src="/images/rob.png" style="opacity: {{0.68}};"></image>
+        <view class="chooseType" >
+            <view class=" {{item.checked?'chooseType-content-select':'chooseType-content'}}'" wx:for="{{list}}" wx:key="index" data-id="{{index}}" bindtap="choose">
+            <image class="chooseType-content-img" src="{{item.img}}" ></image>
+            <view>{{item.name}}</view>   
+            </view>
+        </view>
+    </view>
+    
+    <!--age部分-->
+    <view class="pic" wx:else="">   
+        <image class="rob" mode="widthFix" style="opacity:{{0.8}}" src="/images/rob.png"></image>
+        <view style="flex-direction:row;">
+            <input type="number" bindinput="ageInput" class="name-input" focus placeholder="请输入年龄..." />
+        </view>
+        <view>
+            <button class="name-btn" wx:if="{{age}}" size="mini" type="default" bindtap="gotoRegister_data" >Done</button>
+        </view>
+    </view>
+    <!--进度条部分-->
+    
+</view>
+<view>
+    <view class="progress-box" wx:if="{{!name}}">
+        <progress percent="0" color="#10AEFF" style="position:fixed; bottom:0;width: 750rpx;" active stroke-width="3" />
+    </view>
+    <view class="progress-box" wx:elif="{{!checked}}">
+        <progress percent="33.33" color="#10AEFF" style="position:fixed; bottom:0;width: 750rpx;" active stroke-width="3" />
+    </view>
+    <view class="progress-box" wx:else="">
+        <progress percent="66.66" color="#10AEFF" style="position:fixed; bottom:0;width: 750rpx;" active stroke-width="3" />
+        <view wx:if="{{age}}">
+            <progress percent="100" color="#10AEFF" style="position:fixed; bottom:0;width: 750rpx;" active stroke-width="3" />
+        </view>
+    </view>
+</view>

@@ -1,46 +1,29 @@
-// pages/register_sex/register_sex.js
+// pages/userdata/userdata.js
 Page({
-    sexoptions:[
-        {
-            name:"male",
-            icon:"/images/boy.png"
-        },
-        {
-            name:"female",
-            icon:"/images/girl.png"
-        }
-    ],
+
     /**
      * 页面的初始数据
      */
     data: {
-        age:""
+      user:{
+        name:"",
+        sex:"",
+        age:"",
+      }
     },
-
-    clickBtn:function(n){
-        var index=n.clickBtn.currentTarget.dataset.index
-        this.setData({
-            selectIndex:index
-        })
-    },
-
-    ageInput:function (e) {
-        this.setData({
-            age:e.detail.value
-        })
-    },
-
-    gotoChat:function( ){
-        wx.navigateTo({
-          url: '/pages/index/index',
-        })  
-      },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      this.setData({
+        user:{
+          name:wx.getStorageSync('name'),
+          sex:wx.getStorageSync('sex'),
+          age:wx.getStorageSync('age')
+        }
+      })
+      console.log(wx.getStorageSync('name'),wx.getStorageSync('sex'),wx.getStorageSync('age'))
     },
 
     /**
@@ -49,12 +32,31 @@ Page({
     onReady: function () {
 
     },
-
+    gotologin:function( e){
+      wx.request({
+        url: 'http://127.0.0.1:8080/user/findAll',
+        method: 'POST',
+        data:{
+          name:wx.getStorageSync('name'),
+          sex:wx.getStorageSync('sex'),
+          age:wx.getStorageSync('age')
+        },
+        header:{
+          'content-type':'application/json'
+        },
+        success:function(res) {
+          console.log("success")
+        }
+      })
+      // wx.navigateTo({
+      //   url: '/pages/chat/chat'
+      // })
+    },
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+      
     },
 
     /**
@@ -68,7 +70,7 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     onUnload: function () {
-
+  
     },
 
     /**

@@ -1,13 +1,15 @@
+
 {
     "pages": [
-        "pages/chat/chat",
+        "pages/login/login",
+        "pages/register/register",
+        "pages/register_data/register_data",
         "pages/index/index",
-        "pages/register_name/register_name",
-        "pages/register_age/register_age",
+        "pages/chat/chat",
         "pages/logs/logs",
         "pages/person/person",
-        "pages/robot",
         "pages/robot/robot"
+        
     ],
     "window": {
         "backgroundTextStyle": "light",
