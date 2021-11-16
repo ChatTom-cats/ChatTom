@@ -8,4 +8,6 @@ public interface UserService {
 
     public List<User> findAll();
 
+    public boolean register(User user);
+
 }

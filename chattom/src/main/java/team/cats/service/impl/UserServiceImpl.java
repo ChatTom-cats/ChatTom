@@ -24,4 +24,10 @@ public class UserServiceImpl implements UserService {
         List<User> users = userMapper.selectList(null);
         return users;
     }
+
+    @Override
+    public boolean register(User user) {
+        userMapper.insert(user);
+        return true;
+    }
 }
