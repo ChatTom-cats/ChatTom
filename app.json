@@ -1,22 +1,20 @@
-
 {
-    "pages": [
-        "pages/login/login",
-        "pages/register/register",
-        "pages/register_data/register_data",
-        "pages/index/index",
-        "pages/chat/chat",
-        "pages/logs/logs",
-        "pages/person/person",
-        "pages/robot/robot"
-        
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "ChatTom",
-        "navigationBarTextStyle": "black"
-    },
-    "style": "v2",
-    "sitemapLocation": "sitemap.json"
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/register/register",
+    "pages/register_data/register_data",
+    "pages/chat/chat",
+    "pages/logs/logs",
+    "pages/person/person",
+    "pages/robot/robot"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ChatTom",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
 }

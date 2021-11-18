@@ -32,11 +32,12 @@ Page({
     onReady: function () {
 
     },
-    gotologin:function( e){
+    gotologin:function(e){
       wx.request({
-        url: 'http://127.0.0.1:8080/user/findAll',
+        url: 'http://127.0.0.1:8080/user/register',
         method: 'POST',
         data:{
+          openid:wx.getStorageSync('openid'),
           name:wx.getStorageSync('name'),
           sex:wx.getStorageSync('sex'),
           age:wx.getStorageSync('age')

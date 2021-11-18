@@ -90,14 +90,17 @@ Page({
     })
 
   },
+
   //输入框有文字输入时获取文字内容
   onInput(event) {
     const value = event.detail.value;
    this.setData({ msg: value });
   },
+
   //将输入框内容发送到scroll-view中
   send:function(e) {
     let msg = this.data.msg;
+    
     //提示输入为空
     if (msg == '' ) {
       wx.showToast({
@@ -107,19 +110,34 @@ Page({
       })
       return false;
     }
-     msgList.push({
+    msgList.push({
       msg,
       speaker: 'customer'
      })
-     console.log('发送高度：',inputheight)
-    this.setData({ 
+    console.log('发送高度：',inputheight)
+    this.setData({
       msgList,
       inputVal: '',
       scrollHeight: (windowHeight - keyHeight - inputheight) + 'px',
       toView: 'msg' + (msgList.length - 1),
       msg:''
     });
+    wx.request({
+      url: 'http://127.0.0.1:8080/message/getResp',
+      data: {
+        reqMsg: 'hello'
+      },
+      header:{
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      success(res) {
+        console.log(res.data)
+      }
+    })
+    
   },
+
   userinto: function(){
     wx.navigateTo({
       url: '/pages/person/person',

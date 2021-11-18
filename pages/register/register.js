@@ -5,6 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        openid:"",
         name:"",
         check_name:"T",
         sex:"",
@@ -72,6 +73,7 @@ Page({
       })
     },
     gotoRegister_data:function( ){
+        wx.setStorageSync('openid', this.data.openid)
         wx.setStorageSync('name', this.data.name)
         wx.setStorageSync('sex', this.data.sex)
         wx.setStorageSync('age', this.data.age)
@@ -94,7 +96,9 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      this.setData({
+        openid: options.openid
+      })
     },
 
     /**

@@ -8,8 +8,6 @@ Page({
         gander : "",
         age : "",
         tel : "",
-
-
     },
     
 
