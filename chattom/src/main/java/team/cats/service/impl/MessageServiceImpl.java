@@ -17,7 +17,7 @@ public class MessageServiceImpl implements MessageService {
     @Override
     public String getResp(String req) {
         try {
-            Credential cred = new Credential("AKIDpVw85mS1MRHrBJEvOhnfJjvufBTXNzOZ", "1pRpzvd6LM9i3A3jAKEsGOIwKSLzMTN2");
+            Credential cred = new Credential("", "");
             // 实例化一个http选项，可选的，没有特殊需求可以跳过
             HttpProfile httpProfile = new HttpProfile();
             httpProfile.setEndpoint("nlp.tencentcloudapi.com");
