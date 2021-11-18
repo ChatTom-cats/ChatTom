@@ -14,7 +14,7 @@ mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: team.cats.pojo
   global-config:
-    id-type: 0
+    id-type: 1
     field-strategy: 2
     db-column-underline: true
     refresh-mapper: true
@@ -22,3 +22,7 @@ mybatis-plus:
     logic-delete-value: 1
     logic-not-delete-value: 0
     sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+
+wechat:
+  appid: wxcd637c6fdd690029
+  secret: 91c9d463e339ba96de22fd36330dde08

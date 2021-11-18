@@ -30,4 +30,13 @@ public class UserServiceImpl implements UserService {
         userMapper.insert(user);
         return true;
     }
+
+    @Override
+    public boolean isRegistered(String id) {
+        User user = userMapper.selectById(id);
+        if(user != null) {
+            return true;
+        }
+        return false;
+    }
 }

@@ -10,4 +10,6 @@ public interface UserService {
 
     public boolean register(User user);
 
+    public boolean isRegistered(String id);
+
 }
