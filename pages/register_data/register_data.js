@@ -34,6 +34,11 @@ Page({
           url: '/pages/login/login',
         })
     },
+  //   gotoregister:function( e){
+  //     wx.navigateTo({
+  //       url: '/pages/register/register',
+  //     })
+  // },
     /**
      * 生命周期函数--监听页面显示
      */

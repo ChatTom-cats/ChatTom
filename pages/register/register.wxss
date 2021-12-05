@@ -64,7 +64,13 @@ Page{
     width: 90rpx;
     height: 90rpx;
   }
-  
+  .chooseType{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
   
   .chooseType-content{
     width: 25%;

@@ -25,7 +25,7 @@ Page{
     align-items: center;
     flex-direction: column;
 }
-.user_register_data{
+/* .user_register_data{
     display:flex;
     height: 50%;
     width: 100%;
@@ -34,21 +34,18 @@ Page{
     align-items: center;
     width: 100%;
     font-size: 30px;
-    
-}
+} */
 .table{
     display:flex;
     height: 70%;
-    width: 100%;
+    width: 80%;
     justify-content: center;
     align-items: center;
-    margin-top: 20%;
+    margin-top: 40%;
     font-size: 30px;
+    color: rgb(56, 55, 55);
     flex-direction: column;
-    border-bottom: 2rpx solid #f0f0f0;
-    border-left: 2rpx solid #f0f0f0;
-    border-right: 2rpx solid #f0f0f0;
-    border-top: 2rpx solid #f0f0f0;
+    border-top: 5rpx solid #078039;
 }
 .flex-row{
     width: 100%;
@@ -56,16 +53,9 @@ Page{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-bottom: 2rpx solid #f0f0f0;
-    border-left: 2rpx solid #f0f0f0;
-    border-right: 2rpx solid #f0f0f0;
-  }
-  .flex-column{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+    border-bottom: 2rpx solid #078039;
+    border-left: 2rpx solid #078039;
+    border-right: 2rpx solid #078039;
   }
   .flex-cell{
     flex: 1;
