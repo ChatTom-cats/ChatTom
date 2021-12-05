@@ -4,7 +4,7 @@
   scroll-into-view='{{toView}}' 
   style='height: {{scrollHeight}};'
   >
-  <block wx:for='{{msgList}}' >
+  <block wx:for='{{msgList}}' wx:key="indexs" >
 <!-- 单个消息1 客服发出（左） -->
 <view wx:if='{{item.speaker=="chatTom"}}' id='msg{{index}}' style='display: flex; padding: 2vw 15vw 2vw 2vw;'>
   <view class="headLeft">
@@ -15,7 +15,7 @@
   </view>
 </view>
 <!-- 单个消息2 用户发出（右） -->
-<view wx:if='{{item.speaker=="customer"}}' id='msg{{index}}' style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 15vw; '>
+<view wx:else id='msg{{index}}' style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 15vw; '>
   <view>
     <view style=" display: flex; justify-content: flex-end;">
       <view class='rightMsg'>{{item.msg}}

@@ -17,11 +17,7 @@ function initDate(that){
   inputVal = ''
   msgList = [{
     speaker: 'chatTom',
-    msg: '恭喜EDG夺得2021年全球总决赛冠军！'
-  },
-  {
-    speaker: 'customer',
-    msg: 'EDG牛逼！'
+    msg: '您好，我是ChatTom，很开心能够跟您聊天！'
   }
 ]
   that.setData({
@@ -47,7 +43,7 @@ Page({
       //res就是标签为input的元素的信息的数组
       //取高度
       inputheight=res[0].height;
-      console.log('input高度',inputheight)
+      //console.log('input高度',inputheight)
     })
   },
   getUserProfile(e) {
@@ -71,7 +67,7 @@ Page({
   //input获得聚焦时
   onFocus:function(e){
     keyHeight = e.detail.height;
-    console.log('聚焦高度：',inputheight)
+    //console.log('聚焦高度：',inputheight)
     this.setData({   
       scrollHeight: (windowHeight - keyHeight - inputheight) + 'px',
       inputBottom: keyHeight + 'px'
@@ -110,31 +106,43 @@ Page({
       })
       return false;
     }
-    msgList.push({
-      msg,
-      speaker: 'customer'
-     })
-    console.log('发送高度：',inputheight)
-    this.setData({
-      msgList,
-      inputVal: '',
-      scrollHeight: (windowHeight - keyHeight - inputheight) + 'px',
-      toView: 'msg' + (msgList.length - 1),
-      msg:''
-    });
-    wx.request({
-      url: 'http://127.0.0.1:8080/message/getResp',
-      data: {
-        reqMsg: 'hello'
-      },
-      header:{
-        'content-type': 'application/json'
-      },
-      method: 'POST',
-      success(res) {
-        console.log(res.data)
-      }
-    })
+    else{
+      console.log(msgList)
+      msgList.push({
+        msg,
+        speaker: 'customer'
+       })
+      
+      //console.log('发送高度：',inputheight)
+      wx.request({
+        url: 'http://127.0.0.1:9090/message/getResp',
+        data: {
+          reqMsg: msg
+        },
+        header:{
+          'content-type': 'application/json'
+        },
+        method: 'POST',
+        success:(res)=> {
+          msg = res.data,
+          console.log(res.data)
+          msgList.push({
+            msg,
+            speaker:'chatTom'
+          })
+          this.setData({
+              msgList,
+              inputVal: '',
+              scrollHeight: (windowHeight - keyHeight - inputheight) + 'px',
+              toView: 'msg' + (msgList.length - 1),
+              msg:'' //防止未输入新消息仍可发送上一条消息
+          })
+        },
+      
+      })
+      //console.log(msgList)
+      
+    }
     
   },
 
