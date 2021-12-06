@@ -50,7 +50,7 @@ public class UserController {
         if(userService.isRegistered(openid)) {
             return "pass";
         } else {
-            // 执行get请求.
+            // 执行get请求
             return openid;
         }
     }
