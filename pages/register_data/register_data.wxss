@@ -9,6 +9,14 @@ Page{
     align-items: center;
     text-align: center;
 }
+.bg-image2{
+    position: absolute;
+    top:0;
+    left:0;
+    width : 100%;
+    height : 30%;
+    z-index:-1;
+}
 .bg-image{
     position: absolute;
     top:0;
@@ -25,40 +33,42 @@ Page{
     align-items: center;
     flex-direction: column;
 }
-/* .user_register_data{
-    display:flex;
-    height: 50%;
-    width: 100%;
-    justify-content: center;
-    margin-top: 20%;
-    align-items: center;
-    width: 100%;
-    font-size: 30px;
-} */
+.flot{
+    float: inherit;
+  }
+  .head{
+   margin-top: 20%;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden; 
+   border-radius: 80%;
+   width: 300rpx;
+   height: 300rpx;
+   margin: 16rpx 60rpx;
+  }
 .table{
     display:flex;
-    height: 70%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    margin-top: 40%;
     font-size: 30px;
-    color: rgb(56, 55, 55);
+    color: rgb(10, 9, 9);
     flex-direction: column;
-    border-top: 5rpx solid #078039;
+    margin-top: 15%;
 }
 .flex-row{
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-bottom: 2rpx solid #078039;
-    border-left: 2rpx solid #078039;
-    border-right: 2rpx solid #078039;
+    margin-top: 10%;
   }
   .flex-cell{
     flex: 1;
+
   }
   .check{
     margin-top: 2pc;
@@ -67,3 +77,8 @@ Page{
     justify-content: center;
     align-items:center;
   }
+.icon{
+    width: 120rpx;
+    height: 120rpx;
+    margin-left: 20%;
+}

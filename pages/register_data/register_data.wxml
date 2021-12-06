@@ -1,22 +1,26 @@
 <!--pages/userdata/userdata.wxml-->
 <view class="page" >
-    <image class="bg-image" style="opacity:{{0.68}}" mode="scaleToFill" src="/images/bg2.jpeg"></image>
+    <image class="bg-image" style="opacity:{{0.68}}" mode="scaleToFill" src="/images/bg.jpg"></image>
     <view class="data">
-        <!-- <view class="user_register_data" >用户注册信息汇总</view> -->
-        <view class="table">
-            <view class="flex-cell flex-row">
-                <text class="flex-cell flex-row">姓名</text>
-                <text class="flex-cell flex-row">{{name}}</text>
-            </view>
-            <view class="flex-cell flex-row">
-                <text class="flex-cell flex-row">性别</text>
-                <text class="flex-cell flex-row">{{sex}}</text>
-            </view>
-            <view class="flex-row flex-cell">
-                <text class="flex-cell flex-row">年龄</text>
-                <text class="flex-cell flex-row">{{age}}</text>
-            </view>
+        <view class="head flot">
+            <image class="bg-image2" style="opacity:{{0.33}}" mode="scaleToFill" src="/images/bg2.jpg"></image>
+            <open-data type="userAvatarUrl"></open-data>
         </view>
+        <view class="table">
+            <view class="flex-row">
+                <image src="/images/name.png" class="icon"></image>
+                <text class="flex-cell">{{name}}</text>
+            </view>
+            <view class="flex-row">
+                <image src="/images/sex.png" class="icon"></image>
+                <text class="flex-cell">{{sex}}</text>
+            </view>
+            <view class="flex-row">
+                <image src="/images/age.png" class="icon"></image>
+                <text class="flex-cell ">{{age}}</text>
+            </view>
+            <!-- <button class="check" bindtap="gotologin" type="default" plain="false">确认</button> -->
+        </view>   
         <button class="check" bindtap="gotologin" type="default" plain="false">确认</button>
     </view>
 </view>
