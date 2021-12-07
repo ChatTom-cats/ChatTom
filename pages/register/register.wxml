@@ -28,8 +28,9 @@
         <image class="rob" mode="widthFix" style="opacity:{{0.8}}" src="/images/rob.png"></image>
         <view style="flex-direction:row;">
             <input type="number" bindinput="ageInput" class="name-input" focus placeholder="请输入年龄..." />
+            <!-- 只有输入的年龄合法时才会出现进入下一个页面的按钮 -->
         </view>
-        <view>
+        <view  wx:if="{{age>0&&age<100}}">
             <button class="name-btn" wx:if="{{age}}" size="mini" type="default" bindtap="gotoRegister_data" >Done</button>
         </view>
     </view>

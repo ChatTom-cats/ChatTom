@@ -60,10 +60,22 @@ Page({
     
 
     ageInput:function (e) {
-        this.setData({
+      if(e.detail.value>0&&e.detail.value<100){
+          this.setData({
             age:e.detail.value
+          })
+          var userage = e.detail.value
+      }else{
+          wx.showToast({
+          title: '警告:请输入0-100的数字',     
+          icon: 'none',    
+          duration: 2000//持续的时间  
+        })
+        this.setData({
+          age:0
         })
         var userage = e.detail.value
+      }
     },
 
     chosenSex:function(e){
